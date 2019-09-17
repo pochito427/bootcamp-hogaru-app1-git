@@ -1,0 +1,92 @@
+<head>
+<style>
+table { width: 100%; }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<h1>Git</h1>
+<p>Find me in app/views/static_pages/git.html.erb</p>
+<hr>
+<ul>
+  <li>Inicialización de un repositorio de git nuevo en una aplicación existente
+  <p>Con el comando <strong>git init</strong> es posible inicializar un repositorio de git en el directorio principal de la aplicación</p>
+  </li>
+  <li>Creación de un branch nuevo
+  <p>Si ingresamos el comando <strong>git checkout -b new-branch</strong> creamos una rama nueva con el nombre <em>new-branch</em> y además nos movemos a ella. Esto sirve para no realizar cambios directamente en la rama principal <em>master</em>.</p>
+  </li>
+  <li>Realizar un commit incluyendo todos los cambios actuales
+  <p>Con el comando <strong>git commit -a -m "Commit all modifications"</strong> estamos realizando esta acción.</p>
+  </li>
+  <li>Cómo enviar el código al repositorio remoto
+  <p>El comando <strong>git push</strong> permite realizar esta acción, sin embargo, es recomendable utilizarlo como <strong>git push origin master</strong> pese a que estos dos últimos argumentos son opcionales en la mayoría de los casos.</p>
+  </li>
+  <li>Cómo configurar el origen del repositorio remoto para evitar escribirlo siempre cada vez que se hace un push o un pull.
+  <p>Para que no tengamos que escribir <em>origin master</em> cada vez que realizamos un <em>push</em> o un <em>pull</em> por ejemplo en el repositorio remoto de GitHub, podemos ingresar el comando 
+  <br><strong>git remote add origin https://github.com/pochito427/hello_app.git</strong>
+  <br>donde <em>pochito427</em> es el nombre del usuario o <em>username</em>
+  <br>y <em>hello_app</em> es el nombre del repositorio.</p>
+  </li>
+  <li>Diferencia entre un reset y revert
+  <p>De acuerdo a la referencia sugerida en este <a href="https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting" target="_blank">tutorial</a> las diferencias entre <em>git reset</em> y <em>git revert</em> se resumen así:
+  <br>
+  <table>
+    <thead>
+      <tr>
+      <th>Comando</th>
+      <th>Alcance</th>
+      <th>Casos de uso comunes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="2">git reset</th>
+        <td>Nivel de commit</td>
+        <td>Descarta los commits en una rama privada o retira todos los cambios no enviados (uncommited)</td>
+      </tr>
+      <tr>
+        <td>Nivel de archivo</td>
+        <td>Retira del stage un archivo</td>
+      </tr>
+      <tr>
+        <th rowspan="2">git revert</th>
+        <td>Nivel de commit</td>
+        <td>Deshace los commits en una rama pública</td>
+      </tr>
+      <tr>
+        <td>Nivel de archivo</td>
+        <td>NO APLICA</td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+  </li>
+  <li>Además de cambiar de ramas, para qué más se puede utilizar el comando git checkout
+  <p>El comando <strong>git checkout</strong> también puede servir para descartar los cambios de un arhivo en el directorio de trabajo local</p>
+  </li>
+  <li>Cómo puede ver los commits que se han realizado en el proyecto
+  <p>Con el comando <strong>git log</strong></p>
+  </li>
+  <li>He modificado dos archivos y quiero hacer un commit por cada uno de ellos, ¿cómo lo puedo hacer?
+  <p>De acuerdo con la <a href="https://git-scm.com/docs/git-commit#_examples" target="_blank">documentación oficial de Git</a>, la siguiente serie de comandos permite realizar esta acción:
+  <br><strong>git add archivo1.rb archivo2.rb</strong>
+  <br><strong>git commit archivo1.rb -m "Commit del archivo1 sin incluir archivo2"</strong>
+  <br><strong>git commit archivo2.rb -m "Commit del archivo2"</strong>
+  </p>
+  </li>
+</ul>
+<hr>
+    <h2>Referencias</h2>
+    <ul>
+        <li><a href="https://www.railstutorial.org/book/beginning#sec-version_control" target="_blank">Rails Tutorial by Michael Hartl</a></li>
+        <li><a href="https://git-scm.com/docs" target="_blank">Git official documentation</a></li>
+        <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorial</a></li>
+    </ul>
+</body>

@@ -1,0 +1,84 @@
+<h1>Ruby</h1>
+<p>Find me in app/views/static_pages/ruby.html.erb</p>
+<hr>
+<ul>
+    <li>Interpolación de strings
+    <p>La interpolación de <em>strings</em> o caracteres en Ruby es una forma de crear estas estructuras de datos y es posible implementar con una sintaxis especial usando los caracteres <strong>#{}</strong>
+    <br>Por ejemplo, al interpolar dos variables de tipo <em>string</em> resulta de la siguiente manera:
+    <br><strong>ruby = "Ruby on"</strong>
+    <br><strong>rails = "Rails"</strong>
+    <br><strong>"#{ruby} #{rails}"</strong>
+    <br><em>"Ruby on Rails"</em>
+    </p>
+    </li>
+    <li>Cómo se declara un array y cómo se adiciona un elemento al final del array
+    <p>Un <em>array</em> se declara de la siguiente manera:
+    <br><strong>arreglo = [7, 9, 11]</strong>
+    <br>o también puede declararse usando el objeto Array
+    <br><strong>arreglo_vacio = Array.new</strong>
+    <br><em>[]</em>
+    <br>Un elemento puede agregarse al final del <em>array</em> así:
+    <br><strong>arreglo.push(10)</strong>
+    <br><em>[7, 9, 11, 10]</em>
+    <br><strong>arreglo << 27</strong>
+    <br><em>[7, 9, 11, 10, 27]</em>
+    <br><strong>arreglo << "good" << "job"</strong>
+    <br><em>[7, 9, 11, 10, 27, "good", "job"]</em>
+    </p>
+    </li>
+    <li>Cómo se itera un array utilizando el comando each
+    <p>El arreglo anterior es posible iterarlo con <em>each</em>
+    <br><strong>arreglo.each{|valor| puts valor}</strong>
+    <br><em>7</em>
+    <br><em>9</em>
+    <br><em>11</em>
+    <br><em>10</em>
+    <br><em>27</em>
+    <br><em>good</em>
+    <br><em>job</em>
+    </p>
+    </li>
+    <li>Cómo se declara un hash
+    <p>Un <em>hash</em> se declara así:
+    <br><strong>vacio = {}</strong>
+    <br><em>{}</em>
+    <br><strong>paises = { "Colombia" => "Bogotá", "Japón" => "Tokyo"}</strong>
+    <br><em>{"Colombia"=>"Bogotá", "Japón"=>"Tokyo"}</em>
+    </p>
+    </li>
+    <li>Cómo se itera un hash utilizando el comando each
+    <p>El anterior <em>hash</em> de países como llaves con capitales como valores, se itera con <em>each</em> así:
+    <br><strong>paises.each do|key, value|</strong>
+    <br><strong>puts "La capital de #{key.inspect} es #{value.inspect}"</strong>
+    <br><strong>end</strong>
+    <br><em>La capital de "Colombia" es "Bogotá"</em>
+    <br><em>La capital de "Japón" es "Tokyo"</em>
+    </p>
+    </li>
+    <li>¿Qué es un block en ruby? Dé un ejemplo de cómo utilizarlo
+    <p>Un block en Ruby es un bloque de varias sentencias de código que pueden ejecutarse una o más veces invocando un método.
+    <br>Por ejemplo, si queremos calcular la sumatoria de cada número del 1 al 10, podemos hacerla utilizando el método <em>map</em>
+    <br><strong>(1..10).map{ |n| (n*(n+1))/2 }</strong>
+    <br><em>[1, 3, 6, 10, 15, 21, 28, 36, 45, 55]</em>
+    </p>
+    </li>
+    <li>¿Cuál es la convención en Ruby a la hora de nombrar variables?
+    <p>En Ruby la convención que suele utilizarse al nombrar las variables es con el nombre en minúsculas no capitalizadas y seperando las palabras con el caracter <strong>_</strong> por ejemplo <strong>nombre_variable</strong>
+    <br>En los bloques se utiliza la sintaxis especial <strong>||</strong> para denotar la variable del bloque, por ejemplo <strong>|variable_bloque|</strong>.
+    <br>También existen las variables de instancia que utilizan la sintaxis especial <strong>@</strong>, por ejemplo <strong>@variable_instancia</strong>.
+    </p>
+    </li>
+    <li>¿Qué son attr_reader, attr_writer y attr_accesor? ¿Para qué sirven?
+    <p><em>attr_reader</em> permite crear variables de instancia y los métodos correspondientes que retornan el valor de cada variable de instancia como atributo en una clase de Ruby.
+    <br><em>attr_writer</em> crea un método accesor que permite asignar un valor a un atributo en una clase de Ruby.
+    <br><em>attr_accesor</em> define un atributo nombrado creando una o más variables de instancia y sus correspondientes métodos accesores <em>"getter"</em> y <em>"setter"</em>.
+    <br>Todo lo anterior es útil para aislar las variables de instancia en una clase de Ruby y definirlas como atributos de la clase, esto se conoce como el principio de encapsulamiento en Programación Orientada a Objetos.
+    </p>
+    </li>
+</ul>
+<hr>
+    <h2>Referencias</h2>
+    <ul>
+        <li><a href="https://www.railstutorial.org/book/rails_flavored_ruby" target="_blank">Rails Tutorial by Michael Hartl</a></li>
+        <li><a href="http://docs.ruby-doc.com/docs/ProgrammingRuby/" target="_blank">Programming Ruby - The Pragmatic Programmer's Guide</a></li>
+    </ul>

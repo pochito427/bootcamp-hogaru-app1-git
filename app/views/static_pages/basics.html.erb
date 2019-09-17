@@ -1,0 +1,94 @@
+<head>
+<style>
+table { width: 100%; }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<h1>Basics</h1>
+<p>Find me in app/views/static_pages/basics.html.erb</p>
+<hr>
+<ul>
+    <li>¿Qué es un <em>resource</em> en el contexto de una aplicación web REST en Ruby on Rails?
+    <p>Un <em>resource</em> es un conjunto de componentes de la aplicación web que representan los modelos de datos para ser creados, leídos, actualizados y borrados
+    teniendo en cuenta las operaciones CRUD en bases de datos relacionales y los verbos del protocolo HTTP cada vez que el usuario envía una petición al servidor.</p>
+    </li>
+    <br>
+    <li>¿Qué puede hacerse con un <em>resource</em>?
+    <p>Un <em>resource</em> sirve para mapear todas las rutas URL correspondientes a las acciones que se encuentran en el controlador y a las operaciones CRUD
+    del modelo de datos teniendo en cuenta el patrón MVC (Modelo-Vista-Controlador). Esto es posible incluirlo en el código fuente del archivo de configuración <em>routes.rb</em></p>
+    </li>
+    <br>
+    <li>¿Qué es RESTful routing?
+    <p>Es el proceso de enrutamiento URL de las acciones a realizar por el servidor con las peticiones HTTP enviadas por el usuario siguiendo el estándar REpresentational State Transfer (REST)</p>
+    <ul>
+        <li>¿Cuantas acciones básicas tiene esta filosofía?
+        <p>Comprende siete acciones básicas</p>
+        </li>
+        <li>¿Cuales son?
+        <p>Sin un orden específico estas son las acciones:</p>
+        <ol>
+            <li><em>index</em></li>
+            <li><em>new</em></li>
+            <li><em>create</em></li>
+            <li><em>show</em></li>
+            <li><em>edit</em></li>
+            <li><em>update</em></li>
+            <li><em>destroy</em></li>
+        </ol>
+        </li>
+        <br>
+        <li>¿Cuáles verbos HTTP se utilizan en cada una de ellas?
+        <table>
+            <thead>
+                <tr>
+                    <th>Verbo HTTP</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="4">GET</th>
+                    <td><em>index</em></td>
+                </tr>
+                <tr>
+                    <td><em>new</em></td>
+                </tr>
+                <tr>
+                    <td><em>show</em></td>
+                </tr>
+                <tr>
+                    <td><em>edit</em></td>
+                </tr>
+                <tr>
+                    <th>POST</th>
+                    <td><em>create</em></td>
+                </tr>
+                <tr>
+                    <th>PATCH</th>
+                    <td><em>update</em></td>
+                </tr>
+                <tr>
+                    <th>DELETE</th>
+                    <td><em>destroy</em></td>
+                </tr>
+            </tbody>
+        </table>
+        </li>
+    </ul>
+    </li>
+</ul>
+<hr>
+    <h2>Referencias</h2>
+    <ul>
+        <li><a href="https://www.railstutorial.org/book/toy_app" target="_blank">Rails Tutorial by Michael Hartl</a></li>
+        <li><a href="https://guides.rubyonrails.org/routing.html#resource-routing-the-rails-default" target="_blank">Ruby on Rails documentation guides</a></li>
+    </ul>
+</body>
